@@ -1,10 +1,32 @@
 <!doctype html>
 <html lang="it" data-language="it">
-	{{> head titlePage = "Risultati di ricerca"}}
-
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport"
+	        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Risultati di ricerca</title>
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+	      rel="stylesheet">
+	    <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
+	    <link rel="stylesheet" href="./assets/css/main.css" />
+	</head>
 	<body>
-		{{> header/header }}
-		<main class="l-main page">
+		<header class="header">
+		  <div class="logo">Edoardo Marcuzzi</div>
+		  <nav>
+		    <a href="/" class="nav-item">Home</a>
+		    <a href="foto.html" class="nav-item">Fotografia</a>
+		    <a href="/video" class="nav-item">Video Making</a>
+		    <a href="/contatti" class="nav-item">Contatti</a>
+		  </nav>
+		  <div class="social-wrapper">
+		    <div class="social-item"></div>
+		    <div class="social-item"></div>
+		    <div class="social-item"></div>
+		  </div>
+		</header>		<main class="l-main page">
 			<div class="last-works section-border">
 				<h2 class="section-title">I miei ultimi lavori</h2>
 				<div class="row mt-20">
@@ -57,7 +79,9 @@
 				</div>
 			</div>
 		</main>
-		{{> script}}
-	</body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="./assets/js/vendor/jquery.min.js"></script>
+		<script src="./assets/js/vendor/bootstrap.bundle.js"></script>
+		<script src="./assets/js/main.min.js" defer></script>	</body>
 
 </html>
