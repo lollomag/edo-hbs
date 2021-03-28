@@ -1,0 +1,141 @@
+html,
+body {
+  font-family: $tim-regular;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+
+button {
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &:hover, &:focus, &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+a, a:not([href]) {
+  line-height: normal;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+figure {
+  margin: 0;
+
+  a {
+    display: flex;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: initial;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+select {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand{
+  display: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+span {
+  display: inline-block;
+}
+
+strong {
+  font-family: $tim-bold;
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+
+.l-main {
+  padding-top: 50px;
+  min-height: calc(100vh - 50px);
+
+  @media (min-width: 1279px) {
+    padding-top: 50px;
+    min-height: calc(100vh - 50px);
+  }
+} 

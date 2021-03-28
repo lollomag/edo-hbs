@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="8px" viewBox="0 0 6 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Atoms/Glyphs/arrow-right-small</title>
+    <g id="PROFILO-/-DATI-PERSONALI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_Dati-personali-_end-user-amministratore" transform="translate(-209.000000, -130.000000)">
+            <g id="HEADER-TITLE" transform="translate(-0.000000, 100.000000)">
+                <g id="Atoms/Nav/L/Dark/Breadcrumbs/breadcrumb-previous" transform="translate(87.000000, 22.000000)">
+                    <g id="Atoms/Glyphs/arrow-right-small" transform="translate(119.000000, 6.000000)">
+                        <g stroke-width="1" transform="translate(6.000000, 6.000000) rotate(-90.000000) translate(-6.000000, -6.000000) translate(2.812500, 4.312500)"></g>
+                        <polygon id="Path" fill="#666666" transform="translate(6.000000, 5.875000) scale(1, -1) rotate(-90.000000) translate(-6.000000, -5.875000) " points="9.43443194 3.375 9.75 3.63052305 6 8.375 2.25 3.63052305 2.56556806 3.375 6 7.72015468"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
