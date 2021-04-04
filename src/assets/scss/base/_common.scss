@@ -3,20 +3,24 @@
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    min-height: 100vh;
+  }
 }
 
 main {
   flex: 1 0 auto;
 }
 
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px;
+  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -42,11 +46,17 @@ main {
 }
 
 .page {
-  width: 80%;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 15px;
+  margin-top: 55px;
+
+  @include media-breakpoint-up(lg) {
+    width: calc(100% - 300px);
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
 }
 
 .section-border {
@@ -54,14 +64,13 @@ main {
   padding: 40px 20px;
 }
 
-
 .works-card {
   width: 100%;
-  
+
   .img-wrapper {
     width: 100%;
     height: 200px;
-    
+
     position: relative;
 
     img {
@@ -80,9 +89,6 @@ main {
     font-weight: 600;
   }
 }
-
-
-
 
 .arts-card {
   width: 100%;
@@ -119,4 +125,14 @@ main {
       font-weight: bold;
     }
   }
+}
+
+.custom-btn {
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 150px;
+  background-color: $brown;
+  color: $white;
+  font-weight: bold;
+  border-radius: 5px;
 }

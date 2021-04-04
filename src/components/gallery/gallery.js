@@ -25,7 +25,7 @@ export default class Gallery {
     if (wrapper) {
       array.forEach(el => {
         wrapper.insertAdjacentHTML('afterbegin', `
-        <div class="col-12 col-md-6 col-lg-4 mt-30">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
           <a href="${el.url}" class="gallery-item">
             <img src="${el.url}" alt="test"/>
           </a>

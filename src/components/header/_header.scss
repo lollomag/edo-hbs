@@ -1,14 +1,29 @@
-/* SCSS code for test*/.header {
-  width: 20%;
-  min-width: 250px;
-  max-width: 320px;
-  height: 100vh;
-  padding: 30px;
-  box-sizing: border-box;
+header {
   background-color: $beige;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  @include media-breakpoint-up(lg) {
+    position: static;
+  }
+
+  .header-desktop {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    @include media-breakpoint-up(lg) {
+      width: 300px;
+      height: 100vh;
+      display: flex;
+    }
+  }
 
   .nav-item {
     display: block;
@@ -34,6 +49,41 @@
       height: 30px;
       border-radius: 100%;
       background-color: red;
+    }
+  }
+  
+  .header-mobile {
+    display: block;
+    padding: 15px;
+  
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    .mobile-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mobile-navigation {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      transition: max-height 1s ease-in 1s;
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+        max-height: 1000px;
+        transition: max-height 1s ease-in, opacity .5s ease-in .2s, visibility .5s ease-in .2s;
+
+        nav {
+          margin-top: 30px;
+        }
+      }
     }
   }
 }

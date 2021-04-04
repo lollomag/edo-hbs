@@ -5,22 +5,40 @@
 	<body>
 		{{> header/header }}
 		<main class="l-main page">
-			<h2 class="section-title">Contatti</h2>
-      <div class="d-flex">
-        <img style="max-width: 40%;" src="https://picsum.photos/1000/600" alt=""/>
-        <div class="personal-text">
+      <h2 class="section-title">Contatti</h2>
+      <div class="row mt-50">
+        <div class="col-12 col-md-5">
+          <img class="w-100" src="https://picsum.photos/1000/600" alt=""/>
+        </div>
+        <div class="col-12 col-md-6 offset-md-1">
           <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <h2 class="follow-title">Seguimi sui social</h2>
-          <div class="social-link">
+          <h2 class="follow-title mt-30">Seguimi sui social</h2>
+          <div class="social-link mt-20">
             <span>in</span>
             <span>v</span>
             <span>insta</span>
           </div>
         </div>
       </div>
-      <h2>Contattami per collaborazioni</h2>
-      <form class="">
-
+      <h2 class="mt-50">Contattami per collaborazioni</h2>
+      <form>
+        <div class="row mt-30">
+          <div class="col-12 col-md-6">
+            {{> input/input input=true id="name" label="Nome" placeholder="Nome"}}
+          </div>
+          <div class="col-12 col-md-6">
+            {{> input/input input=true id="email" label="Email" placeholder="Email"}}
+          </div>
+          <div class="col-12 mt-20">
+            {{> input/input input=true id="object" label="Oggetto" placeholder="Oggetto"}}
+          </div>
+          <div class="col-12 mt-20">
+            {{> input/input textarea=true id="message" label="Messaggio" placeholder="Messaggio"}}
+          </div>
+        </div>
+        <div class="fx-center mt-20">
+          <button type="submit" class="custom-btn">Invia</button>
+        </div>
       </form>
 		</main>
 		{{> script}}
