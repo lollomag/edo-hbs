@@ -1,4 +1,5 @@
 import "./polyfill";
+import "./lightgallery";
 
 
 import Gallery from "../../components/gallery/gallery";
