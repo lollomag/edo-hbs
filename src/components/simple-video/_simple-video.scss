@@ -1,0 +1,43 @@
+.simple-video {
+  .preview {
+    display: block;
+    position: relative;
+    height: 200px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: .5);
+      z-index: 5;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 40px;
+      z-index: 10;
+    }
+  }
+
+  .title {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
