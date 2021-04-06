@@ -8,6 +8,7 @@ header {
 
   @include media-breakpoint-up(lg) {
     position: static;
+    width: auto;
   }
 
   .header-desktop {
@@ -19,7 +20,7 @@ header {
     justify-content: space-between;
   
     @include media-breakpoint-up(lg) {
-      width: 300px;
+      width: 250px;
       height: 100vh;
       display: flex;
     }
@@ -45,10 +46,12 @@ header {
     justify-content: space-between;
 
     .social-item {
-      width: 30px;
-      height: 30px;
-      border-radius: 100%;
-      background-color: red;
+      font-size: 30px;
+      color: $black;
+
+      &:hover {
+        color: $brown;
+      }
     }
   }
   
@@ -79,9 +82,11 @@ header {
         height: 100%;
         max-height: 1000px;
         transition: max-height 1s ease-in, opacity .5s ease-in .2s, visibility .5s ease-in .2s;
+        margin-top: 20px;
+        border-top: 1px solid $black;
 
         nav {
-          margin-top: 30px;
+          margin-top: 20px;
         }
       }
     }

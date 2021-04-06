@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'portfolio-edo';
+  src:  url('fonts/portfolio-edo.eot?vqk933');
+  src:  url('fonts/portfolio-edo.eot?vqk933#iefix') format('embedded-opentype'),
+    url('fonts/portfolio-edo.ttf?vqk933') format('truetype'),
+    url('fonts/portfolio-edo.woff?vqk933') format('woff'),
+    url('fonts/portfolio-edo.svg?vqk933#portfolio-edo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icn-"], [class*=" icn-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'portfolio-edo' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icn-close:before {
+  content: "\e903";
+}
+.icn-instagram:before {
+  content: "\e900";
+}
+.icn-linkedin:before {
+  content: "\e901";
+}
+.icn-vimeo:before {
+  content: "\e902";
+}
