@@ -1,6 +1,10 @@
 .modal {
   .modal-dialog {
-    max-width: 1200px;
+    max-width: 900px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 1200px;
+    }
   }
 
   .modal-content {
@@ -10,7 +14,8 @@
 
   .modal-header {
     border: 0;
-    padding: 0;
+    padding: 0 15px;
+
   }
 
   .close {
@@ -19,23 +24,26 @@
   }
 
   .title {
-    font-size: 40px;
+    font-size: 28px;
     line-height: 1.2;
     text-align: center;
+
+    @include media-breakpoint-up(md) {
+      font-size: 40px;
+    }
   }
 
   .description {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.4;
     margin-top: 30px;
-  }
 
-  // .video {
-  //   width: 100%;
-  //   margin-top: 50px;
-  // }
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+  }
 }
 
 .modal-backdrop.show {
-  opacity: .9;
+  opacity: .95;
 }
