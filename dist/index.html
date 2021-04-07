@@ -17,7 +17,9 @@
 	<body>
 		<header>
 		  <div class="header-desktop">
-		    <div class="logo">Edoardo Marcuzzi</div>
+		    <a href="index.html">
+		      <img class="logo" src="../assets/images/logo-placeholder.png" alt="">
+		    </a>
 		    <nav>
 		      <a href="index.html" class="nav-item">Home</a>
 		      <a href="foto.html" class="nav-item">Fotografia</a>
@@ -32,7 +34,9 @@
 		  </div>
 		  <div class="header-mobile">
 		    <div class="mobile-head">
-		      <div class="logo">Edoardo Marcuzzi</div>
+		      <a href="index.html">
+		        <img class="logo" src="../assets/images/logo-placeholder.png" alt="">
+		    </a>
 		      <span class="hamburger-mobile material-icons-outlined">menu</span>
 		    </div>
 		    <div class="mobile-navigation">
@@ -50,49 +54,19 @@
 		    </div>
 		  </div>
 		</header>		<main class="l-main page">
-			<div class="last-works section-border">
-				<h2 class="section-title">I miei ultimi lavori</h2>
-				<div class="row mt-20">
-					<div class="col-12 col-md-6 col-lg-4">
-						<div class="works-card">
-							<div class="img-wrapper">
-								<img src="https://picsum.photos/1000/650" alt="" />
-							</div>
-							<p class="work-title">Il titolo dell'item</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4">
-						<div class="works-card">
-							<div class="img-wrapper">
-								<img src="https://picsum.photos/1000/650" alt="" />
-							</div>
-							<p class="work-title">Il titolo dell'item</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4">
-						<div class="works-card">
-							<div class="img-wrapper">
-								<img src="https://picsum.photos/1000/650" alt="" />
-							</div>
-							<p class="work-title">Il titolo dell'item</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="section-border mt-20">
+			<div class="mb-30">
 				<h2 class="section-title">Scopri le mie arti</h2>
-				<div class="row mt-20">
-					<div class="col-12 col-md-6">
-						<a href="#" class="arts-card">
+				<div class="row">
+					<div class="col-12 col-sm-6 mt-30">
+						<a href="foto.html" class="arts-card">
 							<img src="https://picsum.photos/1000/600" alt="" />
 							<div class="banner-title">
 								<h3 class="title">Foto</h3>
 							</div>
 						</a>
 					</div>
-					<div class="col-12 col-md-6">
-						<a href="#" class="arts-card">
+					<div class="col-12 col-sm-6 mt-30">
+						<a href="video.html" class="arts-card">
 							<img src="https://picsum.photos/1000/600" alt="" />
 							<div class="banner-title">
 								<h3 class="title">Video</h3>
@@ -101,7 +75,60 @@
 					</div>
 				</div>
 			</div>
-		</main>
+			<div class="banner-cv">
+			  <div class="text">
+			    <h3 class="title">Stai cercando il mio CV ?</h3>
+			    <p class="description">Eccoti una bella scorciatoia per non farti perdere tempo</p>
+			  </div>
+			  <a href="#" download="download" class="download-btn">
+			    <span class="btn-text">Scarica il mio CV</span>
+			    <span class="material-icons-outlined">file_download</span>
+			  </a>
+			</div>			<div class="last-works mt-30">
+				<h2 class="section-title">I miei ultimi lavori</h2>
+				<div class="row mt-20 mt-md-0">
+					<div class="col-12 col-sm-6 col-md-4 mt-20">
+						<div class="simple-video">
+						  <a data-toggle="modal" data-target="#modal-video" class="preview">
+						    <img src="https://picsum.photos/1000/600" alt="">
+						    <span class="icon material-icons-outlined">play_circle_outline</span>
+						  </a>
+						  <h2 class="title">Titolo del video</h2>
+						</div>					</div>
+					<div class="col-12 col-sm-6 col-md-4 mt-20">
+						<div class="works-card">
+							<div class="img-wrapper">
+								<img src="https://picsum.photos/1000/650" alt="" />
+							</div>
+							<p class="work-title">Il titolo dell'item</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 mt-20">
+						<div class="works-card">
+							<div class="img-wrapper">
+								<img src="https://picsum.photos/1000/650" alt="" />
+							</div>
+							<p class="work-title">Il titolo dell'item</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true" class="icn-close"></span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <h5 class="title">Titolo di questo video</h5>
+			        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus facilis aut unde magni commodi porro doloremque laboriosam quis, consectetur consequatur dolor vel officiis architecto eos? Minima nam quidem nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus facilis aut unde magni commodi porro doloremque laboriosam quis, consectetur consequatur dolor vel officiis architecto eos? Minima nam quidem nihil!</p>
+			        <video class="mt-50" src="https://storage.coverr.co/videos/s4kTs5BvTelxycBxkODYCjqhNDG01jx6H?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE3NjExMTMwfQ.MdLmzQ5nKL1_GOVugFZaBYLnQraBXp_dYnkJAj-9gu0" controls></video>
+			      </div>
+			    </div>
+			  </div>
+			</div>		</main>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="./assets/js/vendor/jquery.min.js"></script>
 		<script src="./assets/js/vendor/bootstrap.bundle.js"></script>
