@@ -4,20 +4,18 @@ export default class Modals {
   }
   init() {
     $('#modal-video').on('show.bs.modal', function (e) {
+      const videoSets = JSON.parse(localStorage.getItem('videos'));
       const id = e.relatedTarget.getAttribute('data-id');
-      fetch('http://localhost:1337/videos/' + id)
-      .then(res => res.json())
-      .then(data => {
-        const wrapper = document.querySelector('.modal-video .modal-body');
+      const video = videoSets.find(el => el.id == id);
+
+      const wrapper = document.querySelector('.modal-video .modal-body');
         wrapper.insertAdjacentHTML('afterbegin', `
-        <h5 class="title">${data.title}</h5>
-        <p class="description">${data.description}</p>
-        <video class="mt-50" src="http://localhost:1337${data.cover.url}" controls controlsList="nodownload"></video>
+        <h5 class="title">${video.title}</h5>
+        <p class="description">${video.description}</p>
+        <video class="mt-50" src="http://localhost:1337${video.cover.url}" controls controlsList="nodownload"></video>
           `)
-      })
     })
 
-    // const video = document.querySelector('.modal-video video');
     $('#modal-video').on('hidden.bs.modal', function (e) {
       // video.pause();
       const wrapper = document.querySelector('.modal-video .modal-body');

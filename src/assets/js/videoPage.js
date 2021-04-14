@@ -5,11 +5,18 @@ export default class Video {
   getPhoto() {
     const mainVideo = document.querySelector('.main-video');
     if (mainVideo) {
-      fetch('http://localhost:1337/videos')
-        .then(res => res.json())
-        .then(data => {
-          this.createGallery(data)
-        })
+      const lsSet = JSON.parse(localStorage.getItem('videos'));
+
+      if (lsSet) {
+        this.createGallery(lsSet)
+      } else {
+        fetch('http://localhost:1337/videos')
+          .then(res => res.json())
+          .then(data => {
+            localStorage.setItem('videos', JSON.stringify(data));
+            this.createGallery(data)
+          })
+      }
     }
   }
 
@@ -22,7 +29,7 @@ export default class Video {
         mainVideo.insertAdjacentHTML('afterbegin', `
           <div class="row">
             <div class="col-12 col-md-6">
-              <video class="video-item" src="http://localhost:1337${el.cover.url}" type="video/mp4" controls poster="https://picsum.photos/1000/600"></video>
+              <video class="video-item" controlsList="nodownload" src="http://localhost:1337${el.cover.url}" type="video/mp4" controls poster="https://picsum.photos/1000/600"></video>
             </div>
             <div class="col-12 col-md-6">
               <h2 class="title">${el.title}</h2>
