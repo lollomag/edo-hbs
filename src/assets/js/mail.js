@@ -7,9 +7,11 @@ export default class Mail {
   init() {
     const sendBtn = document.querySelector('#form-send-buttom');
 
-    sendBtn.addEventListener('click', () => {
-      this.mail();
-    })
+    if(sendBtn) {
+      sendBtn.addEventListener('click', () => {
+        this.mail();
+      })
+    }
 
   }
 
@@ -30,8 +32,6 @@ export default class Mail {
       message,
       email
     };
-
-    console.log(templateParams);
     
 
     // btn.classList.add('loading');
