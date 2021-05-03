@@ -147,9 +147,9 @@ main {
 .download-btn {
   display: inline-flex;
   align-items: center;
-  border: 2px solid $brown;
+  border: 2px solid white;
   padding: 5px 10px;
-  color: $black;
+  color: $white;
   border-radius: 5px;
   margin-top: 30px;
   transition: all .4s ease-in-out;
@@ -185,7 +185,7 @@ main {
 
   .social-item {
     font-size: 24px;
-    color: $black;
+    color: white;
 
     &:hover {
       color: $brown;
