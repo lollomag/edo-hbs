@@ -7,11 +7,11 @@
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <title>Video</title>
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-	      rel="stylesheet">
-	      <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+	    <link rel="preconnect" href="https://fonts.gstatic.com">
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	    <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
 	    <link rel="stylesheet" href="./assets/css/main.css" />
 	</head>
 	<body>
@@ -21,10 +21,10 @@
 		      <img class="logo" src="../assets/images/logo-placeholder.png" alt="">
 		    </a>
 		    <nav>
-		      <a href="index.html" class="nav-item">Home</a>
-		      <a href="foto.html" class="nav-item">Fotografia</a>
-		      <a href="video.html" class="nav-item">Video Making</a>
-		      <a href="contatti.html" class="nav-item">Contatti</a>
+		      <a href="index.html" class="nav-item ">Home</a>
+		      <a href="foto.html" class="nav-item ">Fotografia</a>
+		      <a href="video.html" class="nav-item active">Video Making</a>
+		      <a href="contatti.html" class="nav-item ">Contatti</a>
 		    </nav>
 		    <div class="social-wrapper">
 		      <a href="#"><span class="social-item icn-linkedin"></span></a>
@@ -58,17 +58,17 @@
 			<div class="main-video">
 			  <div class="row">
 			    <div class="col-12 col-md-6">
-			      <video class="video-item" src="https://storage.coverr.co/videos/s4kTs5BvTelxycBxkODYCjqhNDG01jx6H?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE3NjExMTMwfQ.MdLmzQ5nKL1_GOVugFZaBYLnQraBXp_dYnkJAj-9gu0" controls poster="https://picsum.photos/1000/600"></video>
+			      <div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="529441048"></div>
 			    </div>
 			    <div class="col-12 col-md-6">
-			      <h2 class="title">Titolo di questo bel video</h2>
-			      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem perspiciatis praesentium, dolorum iste, quisquam tempora tempore maiores aperiam sapiente modi aut aspernatur corporis totam provident pariatur voluptatibus minima numquam ut!</p>
+			      <h2 class="title">Titolo</h2>
+			      <p class="description">Descrizione</p>
 			    </div>
 			  </div>
-			</div>			<div class="row mt-30">
+			</div>			<div class="row mt-30" id="modal-videos">
 				<div class="col-12 col-md-4 mt-30">
 					<div class="simple-video">
-					  <a data-toggle="modal" data-target="#modal-video" class="preview">
+					  <a data-toggle="modal" data-target="#modal-video" data-id="0" class="preview">
 					    <img src="https://picsum.photos/1000/600" alt="">
 					    <span class="icon material-icons-outlined">play_circle_outline</span>
 					  </a>
@@ -76,7 +76,7 @@
 					</div>				</div>
 				<div class="col-12 col-md-4 mt-30">
 					<div class="simple-video">
-					  <a data-toggle="modal" data-target="#modal-video" class="preview">
+					  <a data-toggle="modal" data-target="#modal-video" data-id="1" class="preview">
 					    <img src="https://picsum.photos/1000/600" alt="">
 					    <span class="icon material-icons-outlined">play_circle_outline</span>
 					  </a>
@@ -84,7 +84,7 @@
 					</div>				</div>
 				<div class="col-12 col-md-4 mt-30">
 					<div class="simple-video">
-					  <a data-toggle="modal" data-target="#modal-video" class="preview">
+					  <a data-toggle="modal" data-target="#modal-video" data-id="2" class="preview">
 					    <img src="https://picsum.photos/1000/600" alt="">
 					    <span class="icon material-icons-outlined">play_circle_outline</span>
 					  </a>
@@ -92,15 +92,7 @@
 					</div>				</div>
 				<div class="col-12 col-md-4 mt-30">
 					<div class="simple-video">
-					  <a data-toggle="modal" data-target="#modal-video" class="preview">
-					    <img src="https://picsum.photos/1000/600" alt="">
-					    <span class="icon material-icons-outlined">play_circle_outline</span>
-					  </a>
-					  <h2 class="title">Titolo del video</h2>
-					</div>				</div>
-				<div class="col-12 col-md-4 mt-30">
-					<div class="simple-video">
-					  <a data-toggle="modal" data-target="#modal-video" class="preview">
+					  <a data-toggle="modal" data-target="#modal-video" data-id="3" class="preview">
 					    <img src="https://picsum.photos/1000/600" alt="">
 					    <span class="icon material-icons-outlined">play_circle_outline</span>
 					  </a>
@@ -115,17 +107,17 @@
 			          <span aria-hidden="true" class="icn-close"></span>
 			        </button>
 			      </div>
-			      <div class="modal-body">
-			        <h5 class="title">Titolo di questo video</h5>
-			        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus facilis aut unde magni commodi porro doloremque laboriosam quis, consectetur consequatur dolor vel officiis architecto eos? Minima nam quidem nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus facilis aut unde magni commodi porro doloremque laboriosam quis, consectetur consequatur dolor vel officiis architecto eos? Minima nam quidem nihil!</p>
-			        <video class="mt-50" src="https://storage.coverr.co/videos/s4kTs5BvTelxycBxkODYCjqhNDG01jx6H?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE3NjExMTMwfQ.MdLmzQ5nKL1_GOVugFZaBYLnQraBXp_dYnkJAj-9gu0" controls></video>
-			      </div>
+			      <div class="modal-body"></div>
 			    </div>
 			  </div>
 			</div>		</main>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="./assets/js/vendor/jquery.min.js"></script>
 		<script src="./assets/js/vendor/bootstrap.bundle.js"></script>
-		<script src="./assets/js/main.min.js" defer></script>	</body>
+		<script src="https://cdn.plyr.io/3.6.7/plyr.js"></script>
+		<script src="./assets/js/main.min.js" defer></script>
+		<script>
+		  const player = new Plyr('#player');
+		</script>	</body>
 
 </html>

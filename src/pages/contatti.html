@@ -3,7 +3,7 @@
   {{> head titlePage = "Contatti"}}
 
   <body>
-    {{> header/header }}
+    {{> header/header active-4=true}}
     <main class="l-main page">
       <h2 class="section-title">Contatti</h2>
       <div class="row mt-30 mt-md-50">
@@ -20,10 +20,14 @@
             <a href="#" class="social-item"><span class="icn-vimeo"></span></a>
             <a href="#" class="social-item"><span class="icn-instagram"></span></a>
           </div>
+          <a href="#" download="download" class="download-btn mt-40">
+            <span class="btn-text">Scarica il mio CV</span>
+            <span class="material-icons-outlined">file_download</span>
+          </a>
         </div>
       </div>
       <h2 class="follow-title t-bold mt-50">Contattami per collaborazioni</h2>
-      <form>
+      <form id="info-form">
         <div class="row mt-10">
           <div class="col-12 col-md-6 mt-20">
             {{> input/input input=true id="name" label="Nome" placeholder="Nome"}}
@@ -38,10 +42,10 @@
             {{> input/input textarea=true id="message" label="Messaggio" placeholder="Messaggio"}}
           </div>
         </div>
-        <div class="fx-center mt-20">
-          <button type="submit" class="custom-btn">Invia</button>
-        </div>
       </form>
+      <div class="fx-center mt-20">
+        <budivtton class="custom-btn" id="form-send-buttom">Invia</div>
+      </div>
     </main>
     {{> script}}
   </body>
