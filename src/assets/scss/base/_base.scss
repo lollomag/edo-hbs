@@ -1,10 +1,16 @@
 html,
 body {
-  font-family: $tim-regular;
   margin: 0;
   padding: 0;
   color: white;
   background-color: #6E695C;
+}
+
+.container {
+  max-width: 100%;
+  @include media-breakpoint-up(lg) {
+    max-width: 1300px;
+  }
 }
 
 
@@ -97,13 +103,6 @@ input::-ms-clear {
   display: none;
 }
 
-span {
-  display: inline-block;
-}
-
-strong {
-  font-family: $tim-bold;
-}
 
 video {
   width: 100%;

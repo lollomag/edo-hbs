@@ -1,10 +1,4 @@
 /* Theme */
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-);
 
 $grid-breakpoints: (
   xs: 0,
@@ -14,19 +8,19 @@ $grid-breakpoints: (
   xl: 1420px
 );
 
-/* Fonts */
-$tim-thin: 'TimSans-Thin';
-$tim-thin-italic: 'TimSans-Thin-Italic';
-$tim-light: 'TimSans-Light';
-$tim-light-italic: 'TimSans-Light-Italic';
-$tim-regular: 'TimSans-Regular';
-$tiim-regular-italic: 'TimSans-Regular-Italic';
-$tim-medium: 'TimSans-Medium';
-$tim-medium-italic: 'TimSans-Medium-Italic';
-$tim-bold: 'TimSans-Bold';
-$tim-bold-italic: 'TimSans-Bold-Italic';
-$tim-heavy: 'TimSans-Heavy';
-$tim-heavy-italic: 'TimSans-Heavy-Italic';
+// /* Fonts */
+// $tim-thin: 'TimSans-Thin';
+// $tim-thin-italic: 'TimSans-Thin-Italic';
+// $tim-light: 'TimSans-Light';
+// $tim-light-italic: 'TimSans-Light-Italic';
+// $tim-regular: 'TimSans-Regular';
+// $tiim-regular-italic: 'TimSans-Regular-Italic';
+// $tim-medium: 'TimSans-Medium';
+// $tim-medium-italic: 'TimSans-Medium-Italic';
+// $tim-bold: 'TimSans-Bold';
+// $tim-bold-italic: 'TimSans-Bold-Italic';
+// $tim-heavy: 'TimSans-Heavy';
+// $tim-heavy-italic: 'TimSans-Heavy-Italic';
 
 $viewport-width-desktop: 1024;
 

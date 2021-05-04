@@ -1,0 +1,26 @@
+.bio-home {
+  .presenting-video {
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      max-width: 65%;
+      width: 100%;
+      float: right;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 50%;
+      padding-left: 40px;
+    }
+  }
+
+  .bio-text {
+    font-size: 16px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+  }
+}
