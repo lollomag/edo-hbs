@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="it" data-language="it">
   {{> head titlePage = "Contatti"}}
 
@@ -8,20 +8,34 @@
       <div class="container">
         <h2 class="section-title">Contatti</h2>
         <div class="row mt-30 mt-md-50">
-          <div class="col-12 col-md-5">
-            <img class="w-100" src="https://picsum.photos/1000/600" alt="" />
+          <div class="col-12 col-md-7">
+            <h2 class="follow-title t-bold">Contattami per collaborazioni</h2>
+            <form id="info-form">
+              <div class="row mt-10">
+                <div class="col-12 col-md-6 mt-20">
+                  {{> input/input input=true id="name" label="Nome" placeholder="Nome"}}
+                </div>
+                <div class="col-12 col-md-6 mt-20">
+                  {{> input/input input=true id="email" label="Email" placeholder="Email"}}
+                </div>
+                <div class="col-12 mt-20">
+                  {{> input/input input=true id="object" label="Oggetto" placeholder="Oggetto"}}
+                </div>
+                <div class="col-12 mt-20">
+                  {{> input/input textarea=true id="message" label="Messaggio" placeholder="Messaggio"}}
+                </div>
+              </div>
+            </form>
+            <div class="fx-center mt-20">
+              <budivtton class="custom-btn" id="form-send-buttom">Invia
+            </div>
           </div>
-          <div class="col-12 col-md-6 offset-md-1">
-            <p class="info-text mt-15 mt-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              ut
-              aliquip ex ea commodo consequat</p>
-            <h2 class="follow-title mt-30 t-bold">Seguimi sui social</h2>
+          <div class="col-12 col-md-4 offset-md-1 text-center">
             <div class="social-link mt-20">
               <a href="#" class="social-item"><span class="icn-linkedin"></span></a>
               <a href="#" class="social-item"><span class="icn-vimeo"></span></a>
               <a href="#" class="social-item"><span class="icn-instagram"></span></a>
+              <a href="#" class="social-item"><span class="icn-phone"></span></a>
             </div>
             <a href="#" download="download" class="download-btn mt-40">
               <span class="btn-text">Scarica il mio CV</span>
@@ -29,30 +43,10 @@
             </a>
           </div>
         </div>
-        <h2 class="follow-title t-bold mt-50">Contattami per collaborazioni</h2>
-        <form id="info-form">
-          <div class="row mt-10">
-            <div class="col-12 col-md-6 mt-20">
-              {{> input/input input=true id="name" label="Nome" placeholder="Nome"}}
-            </div>
-            <div class="col-12 col-md-6 mt-20">
-              {{> input/input input=true id="email" label="Email" placeholder="Email"}}
-            </div>
-            <div class="col-12 mt-20">
-              {{> input/input input=true id="object" label="Oggetto" placeholder="Oggetto"}}
-            </div>
-            <div class="col-12 mt-20">
-              {{> input/input textarea=true id="message" label="Messaggio" placeholder="Messaggio"}}
-            </div>
-          </div>
-        </form>
-        <div class="fx-center mt-20">
-          <budivtton class="custom-btn" id="form-send-buttom">Invia
-        </div>
       </div>
       </div>
     </main>
     {{> script}}
   </body>
 
-</html>
+</html> -->

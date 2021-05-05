@@ -5,36 +5,38 @@
 	<body>
 		{{> header/header active-3=true}}
 		<main class="l-main page">
-			<h2 class="section-title">Video</h2>
-			{{> main-video/main-video}}
-			<div class="row mt-30" id="modal-videos">
-				<div class="col-12 col-md-4 mt-30">
-					{{> simple-video/simple-video
+			<div class="container">
+				<h2 class="section-title">Video</h2>
+				{{> main-video/main-video}}
+				<div class="row mt-30" id="modal-videos">
+					<div class="col-12 col-md-4 mt-30">
+						{{> simple-video/simple-video
 						id="0"
 						cover="https://picsum.photos/1000/600"
 						title="Titolo del video"
 					}}
-				</div>
-				<div class="col-12 col-md-4 mt-30">
-					{{> simple-video/simple-video
+					</div>
+					<div class="col-12 col-md-4 mt-30">
+						{{> simple-video/simple-video
 						id="1"
 						cover="https://picsum.photos/1000/600"
 						title="Titolo del video"
 					}}
-				</div>
-				<div class="col-12 col-md-4 mt-30">
-					{{> simple-video/simple-video
+					</div>
+					<div class="col-12 col-md-4 mt-30">
+						{{> simple-video/simple-video
 						id="2"
 						cover="https://picsum.photos/1000/600"
 						title="Titolo del video"
 					}}
-				</div>
-				<div class="col-12 col-md-4 mt-30">
-					{{> simple-video/simple-video
+					</div>
+					<div class="col-12 col-md-4 mt-30">
+						{{> simple-video/simple-video
 						id="3"
 						cover="https://picsum.photos/1000/600"
 						title="Titolo del video"
 					}}
+					</div>
 				</div>
 			</div>
 			{{> modals/modal-video}}

@@ -6,8 +6,10 @@
 		{{> header/header active-1=true}}
 		<main class="l-main page">
 			<div class="container">
-				{{> bio-home/bio-home}}
-				<div class="mt-30">
+				<div class="home-video mb-40">
+					<div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="529441048"></div>
+				</div>
+				<div class="mt-30 mb-40">
 					<h2 class="section-title">Scopri le mie arti</h2>
 					<div class="row">
 						<div class="col-12 col-sm-6 mt-30">
@@ -15,6 +17,9 @@
 								<img src="https://picsum.photos/1000/600" alt="" />
 								<div class="banner-title">
 									<h3 class="title">Foto</h3>
+									<span class="card-icon material-icons-outlined">
+										arrow_right_alt
+										</span>
 								</div>
 							</a>
 						</div>
@@ -23,10 +28,50 @@
 								<img src="https://picsum.photos/1000/600" alt="" />
 								<div class="banner-title">
 									<h3 class="title">Video</h3>
+									<span class="card-icon material-icons-outlined">
+										arrow_right_alt
+										</span>
 								</div>
 							</a>
 						</div>
 					</div>
+				</div>
+				{{> bio-home/bio-home}}
+				<div class="row mt-40 fx-center">
+					<div class="col-12 col-md-8">
+						<h2 class="follow-title t-bold text-center">Contattami per collaborazioni</h2>
+            <form id="info-form">
+              <div class="row mt-10">
+                <div class="col-12 col-md-6 mt-20">
+                  {{> input/input input=true id="name" label="Nome" placeholder="Nome"}}
+                </div>
+                <div class="col-12 col-md-6 mt-20">
+                  {{> input/input input=true id="email" label="Email" placeholder="Email"}}
+                </div>
+                <div class="col-12 mt-20">
+                  {{> input/input input=true id="object" label="Oggetto" placeholder="Oggetto"}}
+                </div>
+                <div class="col-12 mt-20">
+                  {{> input/input textarea=true id="message" label="Messaggio" placeholder="Messaggio"}}
+                </div>
+              </div>
+            </form>
+            <div class="fx-center mt-20">
+              <budivtton class="custom-btn" id="form-send-buttom">Invia
+            </div>
+					</div>
+				</div>
+				<div class="fx-center-between mt-40">
+					<div class="social-link mt-20">
+						<a href="#" class="social-item"><span class="icn-linkedin"></span></a>
+						<a href="#" class="social-item"><span class="icn-vimeo"></span></a>
+						<a href="#" class="social-item"><span class="icn-instagram"></span></a>
+						<a href="#" class="social-item"><span class="icn-phone"></span></a>
+					</div>
+					<a href="#" download="download" class="download-btn mt-40">
+						<span class="btn-text">Scarica il mio CV</span>
+						<span class="material-icons-outlined">file_download</span>
+					</a>
 				</div>
 			</div>
 		</main>

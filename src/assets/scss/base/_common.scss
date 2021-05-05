@@ -92,8 +92,10 @@ main {
 .arts-card {
   width: 100%;
   min-height: 200px;
+  border-radius: 5px;
   display: block;
   position: relative;
+  overflow: hidden;
 
   @include media-breakpoint-up(sm) {
     height: 300px;
@@ -101,6 +103,21 @@ main {
 
   @include media-breakpoint-up(xl) {
     height: 400px;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+      transition: all .2s ease-in;
+    }
+    .banner-title {
+      background-color: rgba($color: $black, $alpha: .8);
+      transition: all .2s ease-in;
+    }
+    .card-icon {
+      transform: translateX(10px);
+      transition: all .2s ease-in;
+    }
   }
 
   img {
@@ -112,6 +129,7 @@ main {
     object-fit: cover;
     border-radius: 5px;
     z-index: 1;
+    transition: all .2s ease-in;
   }
 
   .banner-title {
@@ -127,6 +145,7 @@ main {
     background-color: rgba($color: $black, $alpha: .4);
     border-radius: 0 0 5px 5px;
     z-index: 2;
+    transition: all .2s ease-in;
 
     @include media-breakpoint-up(md) {
       min-height: 100px;
@@ -140,6 +159,12 @@ main {
       @include media-breakpoint-up(md) {
         font-size: 28px;
       }
+    }
+
+    .card-icon {
+      color: white;
+      margin-left: 10px;
+      transition: all .2s ease-in;
     }
   }
 }
@@ -190,6 +215,7 @@ main {
 .social-link {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   .social-item {
     font-size: 24px;

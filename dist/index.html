@@ -24,13 +24,8 @@
 		      <a href="index.html" class="nav-item active">Home</a>
 		      <a href="foto.html" class="nav-item ">Fotografia</a>
 		      <a href="video.html" class="nav-item ">Video Making</a>
-		      <a href="contatti.html" class="nav-item ">Contatti</a>
+		      <!-- <a href="contatti.html" class="nav-item ">Contatti</a> -->
 		    </nav>
-		    <div class="social-wrapper">
-		      <a href="#"><span class="social-item icn-linkedin"></span></a>
-		      <a href="#"><span class="social-item icn-vimeo"></span></a>
-		      <a href="#"><span class="social-item icn-instagram"></span></a>
-		    </div>
 		  </div>
 		  <div class="header-mobile">
 		    <div class="mobile-head">
@@ -44,7 +39,7 @@
 		        <a href="index.html" class="nav-item">Home</a>
 		        <a href="foto.html" class="nav-item">Fotografia</a>
 		        <a href="video.html" class="nav-item">Video Making</a>
-		        <a href="contatti.html" class="nav-item">Contatti</a>
+		        <!-- <a href="contatti.html" class="nav-item">Contatti</a> -->
 		      </nav>
 		      <div class="social-wrapper mt-50">
 		        <a href="#"><span class="social-item icn-linkedin"></span></a>
@@ -55,14 +50,10 @@
 		  </div>
 		</header>		<main class="l-main page">
 			<div class="container">
-				<div class="bio-home">
-				  <div class="presenting-video">
-				    <div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="529441048"></div>
-				  </div>
-				  <p class="bio-text">My name is <strong>Edoardo Marcuzzi</strong> and I'm a young director, freelance journalist and creative producer born on the 19 of April in 1996, in La Spezia, a little city in Italy.<br><br>In 2015 I moved to Milan to start my university career in <strong>Media Languages of Cinema</strong> and I graduated in 2019. During this period of my life, I collaborated for 3 and half for a cultural association of my university, where every month I had to publish various articles about the cinema world and we were often invited to report some festivals, about cinema and music, around Italy.<br><br>I also had different work experiences, first with a production based in Milan, where I worked as an editor and assistant director, and after for a radio planning the interviews. I also assisted one professor of my university to publish a book about the literature of south Italy.
-				  In 2020 I moved to <strong>Barcelona</strong> starting a master's degree in filmmaking. With my class I directed 5 shortmovies and I collaborated with many others doing different jobs.<br><br>In my initial career as a director, I focused my attention in the horror genre, trying to show stories with a scary storytelling. But I want to increase my knowledge of the differents kinds of cinema and video productions and I consider myself a flexible videomaker, because I also made some videos about sports events or crowdfunding's campaigns. <strong>My goal is to win the oscar trophy one day.</strong>
-				  </p>
-				</div>				<div class="mt-30">
+				<div class="home-video mb-40">
+					<div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="529441048"></div>
+				</div>
+				<div class="mt-30 mb-40">
 					<h2 class="section-title">Scopri le mie arti</h2>
 					<div class="row">
 						<div class="col-12 col-sm-6 mt-30">
@@ -70,6 +61,9 @@
 								<img src="https://picsum.photos/1000/600" alt="" />
 								<div class="banner-title">
 									<h3 class="title">Foto</h3>
+									<span class="card-icon material-icons-outlined">
+										arrow_right_alt
+										</span>
 								</div>
 							</a>
 						</div>
@@ -78,10 +72,61 @@
 								<img src="https://picsum.photos/1000/600" alt="" />
 								<div class="banner-title">
 									<h3 class="title">Video</h3>
+									<span class="card-icon material-icons-outlined">
+										arrow_right_alt
+										</span>
 								</div>
 							</a>
 						</div>
 					</div>
+				</div>
+				<div class="bio-home">
+				  <p class="bio-text">My name is <strong>Edoardo Marcuzzi</strong> and I'm a young director, freelance journalist and creative producer born on the 19 of April in 1996, in La Spezia, a little city in Italy.<br><br>In 2015 I moved to Milan to start my university career in <strong>Media Languages of Cinema</strong> and I graduated in 2019. During this period of my life, I collaborated for 3 and half for a cultural association of my university, where every month I had to publish various articles about the cinema world and we were often invited to report some festivals, about cinema and music, around Italy.<br><br>I also had different work experiences, first with a production based in Milan, where I worked as an editor and assistant director, and after for a radio planning the interviews. I also assisted one professor of my university to publish a book about the literature of south Italy.
+				  In 2020 I moved to <strong>Barcelona</strong> starting a master's degree in filmmaking. With my class I directed 5 shortmovies and I collaborated with many others doing different jobs.<br><br>In my initial career as a director, I focused my attention in the horror genre, trying to show stories with a scary storytelling. But I want to increase my knowledge of the differents kinds of cinema and video productions and I consider myself a flexible videomaker, because I also made some videos about sports events or crowdfunding's campaigns. <strong>My goal is to win the oscar trophy one day.</strong>
+				  </p>
+				</div>				<div class="row mt-40 fx-center">
+					<div class="col-12 col-md-8">
+						<h2 class="follow-title t-bold text-center">Contattami per collaborazioni</h2>
+            <form id="info-form">
+              <div class="row mt-10">
+                <div class="col-12 col-md-6 mt-20">
+                  <div class="input-wrapper">
+                    <input type="text" id="name" placeholder="Nome">
+                    
+                  </div>                </div>
+                <div class="col-12 col-md-6 mt-20">
+                  <div class="input-wrapper">
+                    <input type="text" id="email" placeholder="Email">
+                    
+                  </div>                </div>
+                <div class="col-12 mt-20">
+                  <div class="input-wrapper">
+                    <input type="text" id="object" placeholder="Oggetto">
+                    
+                  </div>                </div>
+                <div class="col-12 mt-20">
+                  <div class="input-wrapper">
+                    
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Messaggio"></textarea>
+                  </div>                </div>
+              </div>
+            </form>
+            <div class="fx-center mt-20">
+              <budivtton class="custom-btn" id="form-send-buttom">Invia
+            </div>
+					</div>
+				</div>
+				<div class="fx-center-between mt-40">
+					<div class="social-link mt-20">
+						<a href="#" class="social-item"><span class="icn-linkedin"></span></a>
+						<a href="#" class="social-item"><span class="icn-vimeo"></span></a>
+						<a href="#" class="social-item"><span class="icn-instagram"></span></a>
+						<a href="#" class="social-item"><span class="icn-phone"></span></a>
+					</div>
+					<a href="#" download="download" class="download-btn mt-40">
+						<span class="btn-text">Scarica il mio CV</span>
+						<span class="material-icons-outlined">file_download</span>
+					</a>
 				</div>
 			</div>
 		</main>

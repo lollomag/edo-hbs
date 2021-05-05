@@ -25,12 +25,16 @@ header {
     box-sizing: border-box;
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
   
     @include media-breakpoint-up(lg) {
       width: 250px;
       height: 100vh;
       display: flex;
+    }
+
+    nav {
+      margin-top: 150px;
     }
   }
 
