@@ -220,9 +220,11 @@ main {
   .social-item {
     font-size: 24px;
     color: white;
+    transition: all .2s ease-in;
 
     &:hover {
-      color: $brown;
+      transform: scale(1.2);
+      transition: all .2s ease-in;
     }
 
     & + .social-item {
