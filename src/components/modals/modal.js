@@ -7,26 +7,23 @@ export default class Modals {
       {
         id: "0",
         vimeoId: "535609734",
-        title: "Il titolo dai",
-        description: "la descrizione migliore"
+        title: "UP & DOWN",
       },
       {
         id: "1",
         vimeoId: "474122376",
-        title: "Il titolo dai 2",
-        description: "la descrizione migliore 2"
+        title: "THE NIGHT",
+        coda: "Director: Edoardo Marcuzzi, A.D.: Omar Bradosti, Script: Edoardo Marcuzzi and Charis Uster DOP: Omar Bradosti, Art Direction: Charis Uster, Sound: Dario Bierer, Make Up: Marta Ferrer, Original Music: Natalia Laguens, 'Wendy': Alba Cabrera Bancelles, 'Jimmy': Niccolò Ichestre, Producer: Edoardo Marcuzzi"
       },
       {
         id: "2",
         vimeoId: "500386215",
-        title: "Il titolo dai 3",
-        description: "la descrizione migliore 3"
+        title: "Apocalypse Days",
       },
       {
         id: "3",
         vimeoId: "429554240",
-        title: "Il titolo dai 4",
-        description: "la descrizione migliore 4"
+        title: "Reality Sean",
       }
     ];
 
@@ -36,10 +33,10 @@ export default class Modals {
       const video = videoList.find(el => el.id == id);
 
       const wrapper = document.querySelector('.modal-video .modal-body');
-        wrapper.insertAdjacentHTML('afterbegin', `
-        <h5 class="title">${video.title}</h5>
-        <p class="description mb-50">${video.description}</p>
+      wrapper.insertAdjacentHTML('afterbegin', `
+        <h3 class="title mb-50">${video.title}</h3>
         <div id="player-modal" data-plyr-provider="vimeo" data-plyr-embed-id="${video.vimeoId}"></div>
+        <p class="mt-50">${video.coda}</p>
           `)
 
       const videoModal = wrapper.querySelector('#player-modal')
