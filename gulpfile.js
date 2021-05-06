@@ -190,7 +190,7 @@ gulp.task("jsVendor", (cb) => {
 
 gulp.task("images", () => {
   return gulp
-    .src([src_assets_folder + "/images/**/*.+(png|jpg|jpeg|gif|svg|ico)"], {
+    .src([src_assets_folder + "/images/**/*.+(png|jpg|jpeg|gif|svg|ico|pdf)"], {
       since: gulp.lastRun("images"),
     })
     .pipe(plumber())
