@@ -210,6 +210,20 @@ main {
     transform: scale(1.05);
     transition: all .2s ease-in;
   }
+
+  svg {
+    display: none;
+  }
+
+  &.loading {
+    span {
+      display: none;
+    }
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
 
 .social-link {

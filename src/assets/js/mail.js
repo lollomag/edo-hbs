@@ -5,7 +5,7 @@ export default class Mail {
     this.init();
   }
   init() {
-    const sendBtn = document.querySelector('#form-send-buttom');
+    const sendBtn = document.querySelector('#form-send-button');
 
     if(sendBtn) {
       sendBtn.addEventListener('click', () => {
@@ -17,6 +17,8 @@ export default class Mail {
 
   mail() {
     emailjs.init("user_z3RyQJDmg35SxTcFSRJiO");
+
+    const btn = document.querySelector('#form-send-button');
 
     const form = document.querySelector('#info-form');
 
@@ -34,7 +36,7 @@ export default class Mail {
     };
     
 
-    // btn.classList.add('loading');
+    btn.classList.add('loading');
     const serviceID = 'service_h9shcxh';
     const templateID = 'template_fdn4kxd';
 
@@ -42,10 +44,19 @@ export default class Mail {
       .then((response) => {
 
         if (response.status === 200) {
-          console.log('entra');
-          
           $('#modal-email').modal('show')
+          btn.classList.remove('loading');
+          this.cleanForm()
         }
       }, (error) => {});
+  }
+
+  cleanForm() {
+    const form = document.querySelector('#info-form');
+
+    form.querySelector('#name').value = ""
+    form.querySelector('#email').value = ""
+    form.querySelector('#object').value = ""
+    form.querySelector('#message').value = ""
   }
 }
