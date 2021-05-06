@@ -41,10 +41,11 @@ export default class Mail {
     emailjs.send(serviceID, templateID, templateParams)
       .then((response) => {
 
-        // if (response.status === 200) {
-        
-
-        // }
+        if (response.status === 200) {
+          console.log('entra');
+          
+          $('#modal-email').modal('show')
+        }
       }, (error) => {});
   }
 }

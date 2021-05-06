@@ -23,6 +23,33 @@
     color: $white;
   }
 
+  .email-success {
+    max-width: 600px;
+    .modal-content {
+      background-color: white;
+      color: black;
+
+      .close {
+        font-size: 30px;
+        color: black;
+      }
+
+      .modal-header {
+        padding: 15px;
+      }
+
+      .modal-body {
+        padding: 0 15px 35px;
+      }
+
+      .ok-icon {
+        font-size: 70px;
+        color: green;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
   .title {
     font-size: 28px;
     line-height: 1.2;
