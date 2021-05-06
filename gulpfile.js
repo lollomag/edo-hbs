@@ -36,6 +36,7 @@ const npm_assets = {
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
     "node_modules/babel-polyfill/dist/polyfill.js",
+    "node_modules/parsleyjs/dist/parsley.min.js",
   ],
   css: [
     "node_modules/bootstrap/dist/css/bootstrap.min.css"

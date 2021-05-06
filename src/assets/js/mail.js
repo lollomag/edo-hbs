@@ -5,13 +5,13 @@ export default class Mail {
     this.init();
   }
   init() {
-    const sendBtn = document.querySelector('#form-send-button');
+    // const sendBtn = document.querySelector('#form-send-button');
 
-    if(sendBtn) {
-      sendBtn.addEventListener('click', () => {
-        this.mail();
-      })
-    }
+    // if(sendBtn) {
+    //   sendBtn.addEventListener('click', () => {
+    //     this.mail();
+    //   })
+    // }
 
   }
 
