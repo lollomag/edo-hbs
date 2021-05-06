@@ -36,9 +36,9 @@ export default class Mail {
     };
     
 
-    btn.classList.add('loading');
-    const serviceID = 'service_h9shcxh';
-    const templateID = 'template_fdn4kxd';
+    btn.classList.add('loading')
+    const serviceID = 'service_h9shcxh'
+    const templateID = "template_fliqvno";
 
     emailjs.send(serviceID, templateID, templateParams)
       .then((response) => {
