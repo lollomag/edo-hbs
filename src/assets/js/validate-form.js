@@ -1,15 +1,28 @@
-export default class Validate {
-  load() {
-    this.init();
-  }
-  init() {
-    $('#info-form').parsley();
-    $('#info-form').parsley().on('form:validated', function() {
-      // In here, `this` is the parlsey instance of #some-input
-      console.log('entra al submit', this);
-      if(validationResult) {
-        return 'hi'
-      }
+import { sendEmail } from "./mail";
+
+
+const sendBtn = document.querySelector('#form-send-button');
+
+if (sendBtn) {
+  sendBtn.addEventListener('click', () => {
+    console.log('daje');
+    validateForm()
+  })
+}
+
+function validateForm() {
+  // let x= false
+  $('#info-form').parsley()
+    // .on('form:validated', function () {
+    //   console.log('entra al validate', this);
+    //   if (this.validationResult) {
+    //     x = true
+    //   }
+    // })
+    .on('form:success', function () {
+      // console.log('non ci arriva qua si');
+      return false; // Don't submit form for this demo
+      // console.log('non ci arriva qua');
+
     });
-  }
 }
