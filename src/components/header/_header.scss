@@ -1,5 +1,5 @@
 header {
-  background-color: $beige;
+  background-color: #08124a;
   width: 100%;
   position: fixed;
   top: 0;
@@ -13,7 +13,7 @@ header {
 
   .logo-text {
     font-family: 'Allura', cursive;
-    color: $black;
+    color: $white;
     font-size: 24px;
 
     @include media-breakpoint-up(md) {
@@ -42,7 +42,7 @@ header {
 
   .nav-item {
     display: block;
-    color: $black;
+    color: $white;
     font-size: 24px;
 
     &.active {
