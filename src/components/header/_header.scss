@@ -84,7 +84,7 @@ header {
     }
 
     .hamburger-mobile {
-      color: $black;
+      color: $white;
     }
 
     .mobile-navigation {
@@ -101,7 +101,7 @@ header {
         max-height: 1000px;
         transition: max-height 1s ease-in, opacity .5s ease-in .2s, visibility .5s ease-in .2s;
         margin-top: 20px;
-        border-top: 1px solid $black;
+        border-top: 1px solid $white;
 
         nav {
           margin-top: 20px;
