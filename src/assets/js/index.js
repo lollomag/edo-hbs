@@ -1,6 +1,7 @@
 import "./polyfill";
 import "./lightgallery";
 
+import "../../components/bio-carousel/bio-carousel"
 import Header from "../../components/header/header";
 import Gallery from "../../components/gallery/gallery";
 import ModalVideo from "../../components/modals/modal";

@@ -37,9 +37,12 @@ const npm_assets = {
     "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
     "node_modules/babel-polyfill/dist/polyfill.js",
     "node_modules/parsleyjs/dist/parsley.min.js",
+    "node_modules/@accessible360/accessible-slick/slick/slick.min.js"
   ],
   css: [
-    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/@accessible360/accessible-slick/slick/slick.min.css",
+    "node_modules/@accessible360/accessible-slick/slick/accessible-slick-theme.min.css"
   ],
 };
 const npm_assets_js = npm_assets.js;
