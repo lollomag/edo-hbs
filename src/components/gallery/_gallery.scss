@@ -1,4 +1,27 @@
 .gallery-wrapper {
+  .filter-wrapper {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .filter-item {
+      border: 1px solid white;
+      border-radius: 15px;
+      padding: 3px 10px;
+      cursor: pointer;
+
+      &:hover, &.active {
+        background-color: white;
+        color: #3E4B96;
+      }
+
+      & + .filter-item {
+        margin-left: 20px;
+      }
+    }
+  }
+
   .gallery-item {
     display: block;
     overflow: hidden;
