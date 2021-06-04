@@ -186,14 +186,14 @@ function removeAllActive() {
 }
 
 function filterList(data) {
-  wrapperGallery.innerHTML= "";
+  wrapperGallery.innerHTML = "";
   if (data == 'all') {
     createGallery(listPhoto)
   } else {
     const newList = listPhoto.filter(el => 'type-' + el.type == data);
     createGallery(newList);
-
-    window.lgData[wrapperGallery.getAttribute('lg-uid')].destroy(true);
-    initGallery();
   }
+
+  window.lgData[wrapperGallery.getAttribute('lg-uid')].destroy(true);
+  initGallery();
 }
