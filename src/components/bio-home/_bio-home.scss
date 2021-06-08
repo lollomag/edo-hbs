@@ -1,4 +1,8 @@
 .bio-home {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: flex-start;
+  }
   .presenting-video {
     margin-bottom: 30px;
 
@@ -21,6 +25,42 @@
 
     @include media-breakpoint-up(md) {
       font-size: 18px;
+    }
+  }
+
+  img {
+    max-width: 50%;
+    margin: 20px auto;
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      max-width: 35%;
+      margin: 0;
+      margin-left: 15px;
+    }
+  }
+}
+
+.other-image {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+
+    @include media-breakpoint-up(md) {
+      max-width: 30%;
+    }
+
+    & + img {
+      margin-top: 30px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
     }
   }
 }
