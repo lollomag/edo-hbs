@@ -49,10 +49,14 @@
 
   img {
     max-width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 48%;
+    }
 
     @include media-breakpoint-up(md) {
-      max-width: 30%;
+      max-width: 24%;
     }
 
     & + img {
