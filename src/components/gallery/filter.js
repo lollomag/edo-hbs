@@ -1,4 +1,4 @@
-const wrapper = document.querySelector('.filter-wrapper');
+const wrapper = document.querySelector('.filter-wrapper.photo');
 const wrapperGallery = document.querySelector('#lightgallery');
 
 const listPhoto = [

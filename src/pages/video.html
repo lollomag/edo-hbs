@@ -8,8 +8,13 @@
 			<div class="container">
 				<h2 class="section-title">Cinematography</h2>
 				{{> main-video/main-video}}
+				<div class="filter-wrapper video">
+					<div class="filter-item active" data-filter="all">All</div>
+					<div class="filter-item" data-filter="type-1">Filter 1</div>
+					<div class="filter-item" data-filter="type-2">Filter 2</div>
+				</div>
 				<div class="row mt-30" id="modal-videos">
-					<div class="col-12 col-md-4 mt-30">
+					<!-- <div class="col-12 col-md-4 mt-30">
 						{{> simple-video/simple-video
 							cover="./assets/images/artemisia.jpg"
 							title="In production"
@@ -42,7 +47,7 @@
 							cover="./assets/images/reality.jpg"
 							title="Reality Sean"
 						}}
-					</div>
+					</div> -->
 				</div>
 			</div>
 			{{> modals/modal-video}}

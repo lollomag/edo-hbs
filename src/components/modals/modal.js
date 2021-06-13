@@ -1,8 +1,6 @@
-export default class Modals {
-  load() {
-    this.init();
-  }
-  init() {
+
+  init();
+  function init() {
     const videoList = [
       {
         id: "0",
@@ -28,6 +26,9 @@ export default class Modals {
         coda: '<strong>Director:</strong> Edoardo Marcuzzi<br> <strong>Script:</strong> Edoardo Marcuzzi<br> <strong>DOP:</strong> Rebeca Saveedra Gironas<br> <strong>Sound:</strong> Omar Bradosti<br> <strong>Photography Director:</strong> Jan Hernandez Marsol<br> <strong>A.D.:</strong> Anastasia Papapavlou<br> <strong>"Sean":</strong> Niccolò Ichestre<br> <strong>"The Other Man":</strong> Jan Hernandez Marsol<br> <strong>"Voice Interviwer":</strong> Edoardo Marcuzzi'
       }
     ];
+
+    console.log(videoList);
+    
 
 
     $('#modal-video').on('show.bs.modal', function (e) {
@@ -58,4 +59,3 @@ export default class Modals {
       wrapper.innerHTML = "";
     })
   }
-}
