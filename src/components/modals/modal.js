@@ -24,6 +24,18 @@
         vimeoId: "429554240",
         title: "Reality Sean",
         coda: '<strong>Director:</strong> Edoardo Marcuzzi<br> <strong>Script:</strong> Edoardo Marcuzzi<br> <strong>DOP:</strong> Rebeca Saveedra Gironas<br> <strong>Sound:</strong> Omar Bradosti<br> <strong>Photography Director:</strong> Jan Hernandez Marsol<br> <strong>A.D.:</strong> Anastasia Papapavlou<br> <strong>"Sean":</strong> Niccolò Ichestre<br> <strong>"The Other Man":</strong> Jan Hernandez Marsol<br> <strong>"Voice Interviwer":</strong> Edoardo Marcuzzi'
+      },
+      {
+        id: "4",
+        youTube: true,
+        title: "Yt",
+        src: "https://www.youtube.com/embed/GTOAccohMoI"
+      },
+      {
+        id: "5",
+        youTube: true,
+        title: "Yt",
+        src: "https://www.youtube.com/embed/Ht-9rdT-TaU"
       }
     ];
 
@@ -36,17 +48,24 @@
       const video = videoList.find(el => el.id == id);
 
       const wrapper = document.querySelector('.modal-video .modal-body');
-      if(video.coda){
+      if (video.youTube) {
         wrapper.insertAdjacentHTML('afterbegin', `
-        <h3 class="title mb-50">${video.title}</h3>
-        <div id="player-modal" data-plyr-provider="vimeo" data-plyr-embed-id="${video.vimeoId}"></div>
-        <p class="mt-50">${video.coda}</p>
-          `)
+          <h3 class="title mb-50">${video.title}</h3>
+          <iframe width="560" height="315" src="${video.src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            `)
       } else {
-        wrapper.insertAdjacentHTML('afterbegin', `
-        <h3 class="title mb-50">${video.title}</h3>
-        <div id="player-modal" data-plyr-provider="vimeo" data-plyr-embed-id="${video.vimeoId}"></div>
-          `)
+        if(video.coda){
+          wrapper.insertAdjacentHTML('afterbegin', `
+          <h3 class="title mb-50">${video.title}</h3>
+          <div id="player-modal" data-plyr-provider="vimeo" data-plyr-embed-id="${video.vimeoId}"></div>
+          <p class="mt-50">${video.coda}</p>
+            `)
+        } else {
+          wrapper.insertAdjacentHTML('afterbegin', `
+          <h3 class="title mb-50">${video.title}</h3>
+          <div id="player-modal" data-plyr-provider="vimeo" data-plyr-embed-id="${video.vimeoId}"></div>
+            `)
+        }
       }
 
       const videoModal = wrapper.querySelector('#player-modal')

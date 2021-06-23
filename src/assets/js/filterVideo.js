@@ -3,6 +3,20 @@ const wrapperGallery = document.querySelector('#modal-videos');
 
 const listPhoto = [
   {
+    cover: "./assets/images/artemisia.jpg",
+    title: "yt2",
+    id: 5,
+    inProduction: false,
+    type: 2
+  },
+  {
+    cover: "./assets/images/artemisia.jpg",
+    title: "yt1",
+    id: 4,
+    inProduction: false,
+    type: 2
+  },
+  {
     cover: "./assets/images/reality.jpg",
     title: "Reality Sean",
     id: 3,
@@ -28,14 +42,14 @@ const listPhoto = [
     title: "UP & DOWN",
     id: 0,
     inProduction: false,
-    type: 2
+    type: 1
   },
   {
     cover: "./assets/images/artemisia.jpg",
     title: "In production",
     id: 0,
     inProduction: true,
-    type: 2
+    type: 1
   }
 ]
 
