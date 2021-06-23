@@ -253,8 +253,23 @@ main {
   align-items: center;
   justify-content: center;
 
+  
   &.video {
     margin: 50px 0 30px;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(md) {
+      flex-wrap: nowrap;
+    }
+
+    .filter-item {
+      & + .filter-item {
+        margin-left: 10px;
+        @include media-breakpoint-up(md) {
+         margin-left: 20px;
+        }
+      }
+    }
   }
 
   .filter-item {

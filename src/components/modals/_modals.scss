@@ -42,6 +42,23 @@
           min-height: 600px;
         }
       }
+
+      .vimeo-video {
+        width: 100%;
+        min-height: 300px;
+
+        @include media-breakpoint-up(md) {
+          min-height: 400px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          min-height: 500px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          min-height: 600px;
+        }
+      }
     }
   }
 
