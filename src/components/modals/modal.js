@@ -28,13 +28,13 @@ function init() {
     {
       id: "4",
       youTube: true,
-      title: "Yt",
+      title: "Wild Farm Cürnigia - crowdfunding campaign",
       src: "https://www.youtube.com/embed/GTOAccohMoI"
     },
     {
       id: "5",
       youTube: true,
-      title: "Yt",
+      title: "Libri tra i Sassi. I best seller di Matera e della Basilicata",
       src: "https://www.youtube.com/embed/Ht-9rdT-TaU"
     }
   ];

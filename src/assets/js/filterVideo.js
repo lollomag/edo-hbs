@@ -3,15 +3,15 @@ const wrapperGallery = document.querySelector('#modal-videos');
 
 const listPhoto = [
   {
-    cover: "./assets/images/artemisia.jpg",
-    title: "yt2",
+    cover: "https://i.ytimg.com/vi_webp/Ht-9rdT-TaU/maxresdefault.webp",
+    title: "Libri tra i Sassi. I best seller di Matera e della Basilicata",
     id: 5,
     inProduction: false,
     type: 2
   },
   {
-    cover: "./assets/images/artemisia.jpg",
-    title: "yt1",
+    cover: "https://i.ytimg.com/vi_webp/GTOAccohMoI/sddefault.webp",
+    title: "Wild Farm Cürnigia - crowdfunding campaign",
     id: 4,
     inProduction: false,
     type: 2

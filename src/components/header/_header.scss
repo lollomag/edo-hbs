@@ -36,6 +36,10 @@ header {
       display: flex;
     }
 
+    .logo {
+      max-width: 100px;
+    }
+
     nav {
       margin-top: 150px;
     }
@@ -76,6 +80,10 @@ header {
   
     @include media-breakpoint-up(lg) {
       display: none;
+    }
+
+    .logo {
+      max-width: 30px;
     }
 
     .mobile-head {
