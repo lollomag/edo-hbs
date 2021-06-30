@@ -43,10 +43,6 @@ const listPhoto = [
     type: 1
   },
   {
-    img: "./assets/images/photo/DSC00767.jpg",
-    type: 1
-  },
-  {
     img: "./assets/images/photo/DSC00782.jpg",
     type: 1
   },
