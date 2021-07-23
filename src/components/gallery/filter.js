@@ -83,15 +83,15 @@ const listPhoto = [
     type: 1
   },
   {
-    img: "./assets/images/carousel/image-1.png",
+    img: "./assets/images/carousel/image-1.jpeg",
     type: 2
   },
   {
-    img: "./assets/images/carousel/image-2.png",
+    img: "./assets/images/carousel/image-2.jpeg",
     type: 2
   },
   {
-    img: "./assets/images/carousel/image-3.png",
+    img: "./assets/images/carousel/image-3.jpeg",
     type: 2
   },
   {
@@ -99,7 +99,7 @@ const listPhoto = [
     type: 2
   },
   {
-    img: "./assets/images/carousel/image-5.png",
+    img: "./assets/images/carousel/image-5.jpeg",
     type: 2
   },
   {
@@ -123,11 +123,7 @@ const listPhoto = [
     type: 2
   },
   {
-    img: "./assets/images/carousel/image-11.png",
-    type: 2
-  },
-  {
-    img: "./assets/images/carousel/image-12.png",
+    img: "./assets/images/carousel/image-11.jpeg",
     type: 2
   }
 ]
