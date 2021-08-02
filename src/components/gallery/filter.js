@@ -95,7 +95,7 @@ const listPhoto = [
     type: 2
   },
   {
-    img: "./assets/images/carousel/image-4.png",
+    img: "./assets/images/carousel/image-4.jpeg",
     type: 2
   },
   {
