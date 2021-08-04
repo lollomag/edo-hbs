@@ -5,50 +5,50 @@ const listPhoto = [
   {
     cover: "https://i.ytimg.com/vi_webp/Ht-9rdT-TaU/maxresdefault.webp",
     title: "Libri tra i Sassi. I best seller di Matera e della Basilicata",
-    id: 5,
+    id: 6,
     inProduction: false,
     type: 2
   },
   {
     cover: "https://i.ytimg.com/vi_webp/GTOAccohMoI/sddefault.webp",
     title: "Wild Farm Cürnigia - crowdfunding campaign",
-    id: 4,
+    id: 5,
     inProduction: false,
     type: 2
   },
   {
     cover: "./assets/images/reality.jpg",
     title: "Reality Sean",
-    id: 3,
+    id: 4,
     inProduction: false,
     type: 1
   },
   {
     cover: "./assets/images/apocalypse.jpg",
     title: "Apocalypse Days",
-    id: 2,
+    id: 3,
     inProduction: false,
     type: 1
   },
   {
     cover: "./assets/images/the-night.jpg",
     title: "THE NIGHT",
-    id: 1,
+    id: 2,
     inProduction: false,
     type: 1
   },
   {
     cover: "./assets/images/up-down.jpg",
     title: "UP & DOWN",
-    id: 0,
+    id: 1,
     inProduction: false,
     type: 1
   },
   {
     cover: "./assets/images/artemisia.jpg",
-    title: "In production",
+    title: "Artemisia",
     id: 0,
-    inProduction: true,
+    inProduction: false,
     type: 1
   }
 ]
