@@ -1,6 +1,8 @@
 const wrapper = document.querySelector('.home-video');
 
 if (wrapper) {
+  console.log('arriva');
+  
   fetch('http://localhost:1337/homepage')
   .then(response => response.json())
   .then(data => {
