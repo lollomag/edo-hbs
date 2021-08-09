@@ -19,11 +19,11 @@ function init() {
       title: "THE NIGHT",
       coda: '<strong>Director:</strong> Edoardo Marcuzzi <br> <strong>A.D.:</strong> Omar Bradosti <br> <strong>Script:</strong> Edoardo Marcuzzi and Charis Uster <br><strong>DOP:</strong> Omar Bradosti <br><strong>Art Direction:</strong> Charis Uster <br><strong>Sound:</strong> Dario Bierer <br><strong>Make Up:</strong> Marta Ferrer <br><strong>Original Music:</strong> Natalia Laguens <br><strong>"Wendy":</strong> Alba Cabrera Bancelles<br><strong>"Jimmy":</strong> Niccolò Ichestre<br><strong>Producer:</strong> Edoardo Marcuzzi'
     },
-    {
-      id: "3",
-      vimeoId: "500386215",
-      title: "Apocalypse Days",
-    },
+    // {
+    //   id: "3",
+    //   vimeoId: "500386215",
+    //   title: "Apocalypse Days",
+    // },
     {
       id: "4",
       vimeoId: "429554240",

@@ -23,13 +23,13 @@ const listPhoto = [
     inProduction: false,
     type: 1
   },
-  {
-    cover: "./assets/images/apocalypse.jpg",
-    title: "Apocalypse Days",
-    id: 3,
-    inProduction: false,
-    type: 1
-  },
+  // {
+  //   cover: "./assets/images/apocalypse.jpg",
+  //   title: "Apocalypse Days",
+  //   id: 3,
+  //   inProduction: false,
+  //   type: 1
+  // },
   {
     cover: "./assets/images/the-night.jpg",
     title: "THE NIGHT",
