@@ -1,64 +1,17 @@
 const wrapper = document.querySelector('.filter-wrapper.video');
 const wrapperGallery = document.querySelector('#modal-videos');
 
-const listPhoto = [
-  {
-    cover: "https://i.ytimg.com/vi_webp/Ht-9rdT-TaU/maxresdefault.webp",
-    title: "Libri tra i Sassi. I best seller di Matera e della Basilicata",
-    id: 6,
-    inProduction: false,
-    type: 2
-  },
-  {
-    cover: "https://i.ytimg.com/vi_webp/GTOAccohMoI/sddefault.webp",
-    title: "Wild Farm Cürnigia - crowdfunding campaign",
-    id: 5,
-    inProduction: false,
-    type: 2
-  },
-  {
-    cover: "./assets/images/reality.jpg",
-    title: "Reality Sean",
-    id: 4,
-    inProduction: false,
-    type: 1
-  },
-  {
-    cover: "./assets/images/apocalypse.jpg",
-    title: "Apocalypse Days",
-    id: 3,
-    inProduction: false,
-    type: 1
-  },
-  {
-    cover: "./assets/images/the-night.jpg",
-    title: "THE NIGHT",
-    id: 2,
-    inProduction: false,
-    type: 1
-  },
-  {
-    cover: "./assets/images/up-down.jpg",
-    title: "UP & DOWN",
-    id: 1,
-    inProduction: false,
-    type: 1
-  },
-  {
-    cover: "./assets/images/artemisia.jpg",
-    title: "Artemisia",
-    id: 0,
-    inProduction: false,
-    type: 1
-  }
-]
-
 init();
 
 function init() {
   if (!wrapper && !wrapperGallery) return
-  createGallery(listPhoto);
-  addActive();
+
+  fetch('http://localhost:1337/cinema-videos')
+  .then(response => response.json())
+  .then(data => {
+    createGallery(data);
+    addActive(data);
+  });
 }
 
 function createGallery(list) {
@@ -68,7 +21,7 @@ function createGallery(list) {
     <div class="col-12 col-md-4 mt-30" data-filter="type-${item.type}">
       <div class="simple-video">
         <div class="preview">
-          <img src="${item.cover}" alt="">
+          <img src="http://localhost:1337${item.cover.url}" alt="">
           <span class="icon material-icons-outlined">movie</span>
         </div>
         <h2 class="title">${item.title}</h2>
@@ -80,7 +33,7 @@ function createGallery(list) {
       <div class="col-12 col-md-4 mt-30" data-filter="type-${item.type}">
         <div class="simple-video">
           <a data-toggle="modal" data-target="#modal-video" data-id="${item.id}" class="preview">
-            <img src="${item.cover}" alt="">
+            <img src="http://localhost:1337${item.cover.url}" alt="">
             <span class="icon material-icons-outlined">play_circle_outline</span>
           </a>
           <h2 class="title">${item.title}</h2>
@@ -91,14 +44,14 @@ function createGallery(list) {
   });
 }
 
-function addActive() {
+function addActive(list) {
   const filters = wrapper.querySelectorAll('.filter-item');
   filters.forEach(filter => {
     filter.addEventListener('click', evt => {
       removeAllActive();
       filter.classList.add('active');
       const data = evt.target.getAttribute('data-filter');
-      filterList(data);
+      filterList(data, list);
     });
   });
 }
@@ -110,12 +63,12 @@ function removeAllActive() {
   });
 }
 
-function filterList(data) {
+function filterList(data, list) {
   wrapperGallery.innerHTML = "";
   if (data == 'all') {
-    createGallery(listPhoto)
+    createGallery(list)
   } else {
-    const newList = listPhoto.filter(el => 'type-' + el.type == data);
+    const newList = list.filter(el => el.filterType == data);
     createGallery(newList);
   }
 }
