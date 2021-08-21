@@ -278,6 +278,7 @@ main {
     border: 1px solid white;
     border-radius: 15px;
     padding: 3px 10px;
+    text-transform: capitalize;
     cursor: pointer;
 
     &:hover, &.active {

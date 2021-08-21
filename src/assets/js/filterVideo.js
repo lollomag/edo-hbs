@@ -10,7 +10,20 @@ function init() {
   .then(response => response.json())
   .then(data => {
     createGallery(data);
-    addActive(data);
+    createFilterElement(data);
+  });
+}
+
+function createFilterElement(photoList) {
+  fetch('http://localhost:1337/filter-videos')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(item => {
+      wrapper.insertAdjacentHTML('beforeend', `
+      <div class="filter-item" data-filter="${item.filter_name}">${item.filter_name}</div>
+      `)
+    });
+    addActive(photoList);
   });
 }
 
@@ -18,7 +31,7 @@ function createGallery(list) {
   list.forEach((item, index) => {
     if (item.inProduction) {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
-    <div class="col-12 col-md-4 mt-30" data-filter="type-${item.type}">
+    <div class="col-12 col-md-4 mt-30" data-filter="type-${item.filter_video.filter_name}">
       <div class="simple-video">
         <div class="preview">
           <img src="http://localhost:1337${item.cover.url}" alt="">
@@ -30,7 +43,7 @@ function createGallery(list) {
     `)
     } else {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
-      <div class="col-12 col-md-4 mt-30" data-filter="type-${item.type}">
+      <div class="col-12 col-md-4 mt-30" data-filter="type-${item.filter_video.filter_name}">
         <div class="simple-video">
           <a data-toggle="modal" data-target="#modal-video" data-id="${item.id}" class="preview">
             <img src="http://localhost:1337${item.cover.url}" alt="">
