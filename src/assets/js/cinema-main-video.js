@@ -1,7 +1,7 @@
 const wrapper = document.querySelector('.main-video-cinema');
 
 if (wrapper) {
-  fetch('http://localhost:1337/cinema-main-video')
+  fetch('https://be-edo.herokuapp.com/cinema-main-video')
     .then(response => response.json())
     .then(data => {
       if (data.description) {

@@ -2,7 +2,7 @@ const carousel = document.querySelector('.bio-carousel');
 const wrapperVideo = document.querySelector('.home-video');
 
 if (wrapperVideo && carousel) {
-  fetch('http://localhost:1337/home-page')
+  fetch('https://be-edo.herokuapp.com/home-page')
     .then(response => response.json())
     .then(data => {
       wrapperVideo.insertAdjacentHTML('afterbegin', `
@@ -12,7 +12,7 @@ if (wrapperVideo && carousel) {
       data.photos.forEach(element => {
         carousel.insertAdjacentHTML('afterbegin', `
         <div>
-          <img src="http://localhost:1337${element.url}" alt="">
+          <img src="${element.url}" alt="">
         </div>
         `)
       });
@@ -27,6 +27,6 @@ if (wrapperVideo && carousel) {
       })
 
       const cvWrapper = document.querySelector('.download-btn');
-      cvWrapper.setAttribute('href', 'http://localhost:1337' + data.curriculum.url);
+      cvWrapper.setAttribute('href', data.curriculum.url);
     });
 }

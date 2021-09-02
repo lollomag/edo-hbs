@@ -47,7 +47,7 @@ function init() {
   $('#modal-video').on('show.bs.modal', function (e) {
     const id = e.relatedTarget.getAttribute('data-id');
 
-    fetch('http://localhost:1337/cinema-videos/' + id)
+    fetch('https://be-edo.herokuapp.com/cinema-videos/' + id)
       .then(response => response.json())
       .then(data => {
         console.log(data);

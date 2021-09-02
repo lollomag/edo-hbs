@@ -2,7 +2,7 @@ const wrapper = document.querySelector('.bio-home');
 const imagesWrapper = document.querySelector('.other-image');
 
 if (wrapper) {
-  fetch('http://localhost:1337/about')
+  fetch('https://be-edo.herokuapp.com/about')
     .then(response => response.json())
     .then(data => {
       wrapper.insertAdjacentHTML('afterbegin', data.biography)
