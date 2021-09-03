@@ -1,11 +1,12 @@
 import "./polyfill";
 import "./lightgallery";
-
-import "../../components/bio-carousel/bio-carousel"
-import "../../components/header/header";
-import "../../components/gallery/gallery";
+import "./homepage";
+import "./about";
+import "./cinema-main-video";
 import "./validate-form";
-import "../../components/gallery/filter";
 import "./filterVideo";
+
+import "../../components/header/header";
+import "../../components/gallery/filter";
 import "../../components/modals/modal";
 
