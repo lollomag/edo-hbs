@@ -8,7 +8,7 @@ if (wrapper) {
       wrapper.insertAdjacentHTML('afterbegin', data.biography)
       
       data.photos.forEach(element => {
-        imagesWrapper.insertAdjacentHTML('afterbegin', `<img src="http://localhost:1337${element.url}" alt="">`)
+        imagesWrapper.insertAdjacentHTML('afterbegin', `<img src="${element.url}" alt="">`)
       });
     });
 }

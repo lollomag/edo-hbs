@@ -29,9 +29,11 @@ function createFilterElement(photoList) {
 
 function createGallery(list) {
   list.forEach((item, index) => {
+    console.log(item);
+    
     if (item.inProduction) {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
-    <div class="col-12 col-md-4 mt-30" data-filter="type-${item.filter_video.filter_name}">
+    <div class="col-12 col-md-4 mt-30" data-filter="${item.filter_video.filter_name}">
       <div class="simple-video">
         <div class="preview">
           <img src="${item.cover.url}" alt="">
@@ -43,7 +45,7 @@ function createGallery(list) {
     `)
     } else {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
-      <div class="col-12 col-md-4 mt-30" data-filter="type-${item.filter_video.filter_name}">
+      <div class="col-12 col-md-4 mt-30" data-filter="${item.filter_video.filter_name}">
         <div class="simple-video">
           <a data-toggle="modal" data-target="#modal-video" data-id="${item.id}" class="preview">
             <img src="${item.cover.url}" alt="">
@@ -81,7 +83,7 @@ function filterList(data, list) {
   if (data == 'all') {
     createGallery(list)
   } else {
-    const newList = list.filter(el => el.filterType == data);
+    const newList = list.filter(el => el.filter_video.filter_name == data);
     createGallery(newList);
   }
 }

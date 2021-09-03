@@ -50,7 +50,6 @@ function init() {
     fetch('https://be-edo.herokuapp.com/cinema-videos/' + id)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         const wrapper = document.querySelector('.modal-video .modal-body');
         if (data.testvimeoyt[0].link) {
           if (data.credits) {

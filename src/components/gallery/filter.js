@@ -6,11 +6,9 @@ init();
 function init() {
   if (!wrapper && !wrapperGallery) return
 
-  fetch('http://localhost:1337/photos')
+  fetch('https://be-edo.herokuapp.com/photos')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
-    
     createFilterElement(data);
     createGallery(data);
     initGallery()
@@ -18,7 +16,7 @@ function init() {
 }
 
 function createFilterElement(photoList) {
-  fetch('http://localhost:1337/filter-photos')
+  fetch('https://be-edo.herokuapp.com/filter-photos')
   .then(response => response.json())
   .then(data => {
     data.forEach(item => {
@@ -54,10 +52,7 @@ function initGallery() {
 function addActive(initialList) {
   const filters = wrapper.querySelectorAll('.filter-item');
   filters.forEach(filter => {
-    console.log(filter);
-    
     filter.addEventListener('click', evt => {
-
       removeAllActive();
       filter.classList.add('active');
       const data = evt.target.getAttribute('data-filter');
