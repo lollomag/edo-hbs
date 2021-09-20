@@ -7,7 +7,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <meta name="description"
 	        content="Hi, I'm Edoardo Marcuzzi, a young director, freelance journalist and creative producer born on the 19 of April in 1996, in La Spezia. Here is my works">
-	    <title>Risultati di ricerca</title>
+	    <title>Photos</title>
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" defer>
 	    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet" defer>
 	    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
 		        <a href="index.html" class="nav-item ">Home</a>
 		        <a href="foto.html" class="nav-item active">Photos</a>
 		        <a href="video.html" class="nav-item ">Cinema</a>
-		        <a href="bio.html" class="nav-item ">Bio</a>
+		        <a href="about.html" class="nav-item ">About</a>
 		      </nav>
 		    </div>
 		  </div>
@@ -67,15 +67,16 @@
 				  <div id="lightgallery" class="row"></div>
 				</div>			</div>
 		</main>
-		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="./assets/js/vendor/jquery.min.js"></script>
 		<script src="./assets/js/vendor/bootstrap.bundle.js"></script>
 		<script src="./assets/js/vendor/parsley.min.js" defer></script>
 		<script src="./assets/js/vendor/slick.min.js" defer></script>
-		<script src="https://cdn.plyr.io/3.6.7/plyr.js"></script>
-		<script type="module" src="./assets/js/main.min.js" async></script>
+		<script src="https://cdn.plyr.io/3.6.7/plyr.js" defer></script>
+		<script type="module" src="./assets/js/main.min.js"></script>
 		<script>
-		  const player = new Plyr('#player');
+		  window.addEventListener("DOMContentLoaded", () => {
+		    const player = new Plyr('#player');
+		  });
 		</script>	</body>
 
 </html>

@@ -29,7 +29,6 @@ function createFilterElement(photoList) {
 
 function createGallery(list) {
   list.forEach((item, index) => {
-    console.log(item);
     
     if (item.inProduction) {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
