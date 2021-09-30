@@ -7,39 +7,43 @@ function init() {
   if (!wrapper && !wrapperGallery) return
 
   fetch('https://be-edo.herokuapp.com/photos')
-  .then(response => response.json())
-  .then(data => {
-    createFilterElement(data);
-    createGallery(data);
-    initGallery()
-  });
+    .then(response => response.json())
+    .then(data => {
+      createFilterElement(data);
+      createGallery(data);
+    });
 }
 
 function createFilterElement(photoList) {
   fetch('https://be-edo.herokuapp.com/filter-photos')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(item => {
-      wrapper.insertAdjacentHTML('beforeend', `
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(item => {
+        wrapper.insertAdjacentHTML('beforeend', `
       <div class="filter-item" data-filter="${item.filterName}">${item.filterName}</div>
       `)
+      });
+      addActive(photoList);
     });
-    addActive(photoList);
-  });
 }
 
 function createGallery(list) {
   list.forEach(item => {
     if (!item) return;
-    
-    wrapperGallery.insertAdjacentHTML('afterbegin', `
-    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-30 gallery-item-grid" data-filter="${item.filter_photo.filterName}">
-      <a href="${item.image.url}" class="gallery-item">
-        <img src="${item.image.url}" alt="this link open the gallery" />
-      </a>
-    </div>
+
+    if (item.image) {
+      console.log(item.image.formats.thumbnail);
+      wrapperGallery.insertAdjacentHTML('afterbegin', `
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-30 gallery-item-grid" data-filter="${item.filter_photo.filterName}">
+          <a href="${item.image.url}" class="gallery-item">
+            <img src="${item.image.url}" alt="this link open the gallery" />
+          </a>
+        </div>
     `)
+    }
+
   });
+  initGallery()
 }
 
 function initGallery() {
