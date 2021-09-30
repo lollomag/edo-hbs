@@ -12,16 +12,6 @@ header {
     width: auto;
   }
 
-  .logo-text {
-    font-family: 'Allura', cursive;
-    color: $white;
-    font-size: 24px;
-
-    @include media-breakpoint-up(md) {
-      font-size: 38px;
-    }
-  }
-
   .header-desktop {
     width: 100%;
     padding: 30px;
