@@ -15,7 +15,8 @@ window.addEventListener("DOMContentLoaded", () => {
   try {
     const player = new Plyr('#player');
   } catch (error) {
-    console.error(error);
+    // console.error(error);
+    console.clear()
     // expected output: ReferenceError: nonExistentFunction is not defined
     // Note - error messages will vary depending on browser
   }

@@ -30,10 +30,12 @@ function createFilterElement(photoList) {
 
 function createGallery(list) {
   list.forEach(item => {
+    if (!item) return;
+    
     wrapperGallery.insertAdjacentHTML('afterbegin', `
     <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-30 gallery-item-grid" data-filter="${item.filter_photo.filterName}">
       <a href="${item.image.url}" class="gallery-item">
-        <img src="${item.image.url}" alt="" />
+        <img src="${item.image.url}" alt="this link open the gallery" />
       </a>
     </div>
     `)
