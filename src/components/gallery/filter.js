@@ -11,6 +11,7 @@ function init() {
     .then(data => {
       createFilterElement(data);
       createGallery(data);
+      filterList('photos', data);
     });
 }
 
@@ -32,7 +33,6 @@ function createGallery(list) {
     if (!item) return;
 
     if (item.image) {
-      console.log(item.image.formats.thumbnail);
       wrapperGallery.insertAdjacentHTML('afterbegin', `
         <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-30 gallery-item-grid" data-filter="${item.filter_photo.filterName}">
           <a href="${item.image.url}" class="gallery-item">
@@ -43,6 +43,7 @@ function createGallery(list) {
     }
 
   });
+  
   initGallery()
 }
 
@@ -58,6 +59,9 @@ function initGallery() {
 function addActive(initialList) {
   const filters = wrapper.querySelectorAll('.filter-item');
   filters.forEach(filter => {
+    if (filter.getAttribute('data-filter') === 'photos') {
+      filter.classList.add('active');
+    }
     filter.addEventListener('click', evt => {
       removeAllActive();
       filter.classList.add('active');
@@ -76,12 +80,9 @@ function removeAllActive() {
 
 function filterList(data, initialList) {
   wrapperGallery.innerHTML = "";
-  if (data == 'all') {
-    createGallery(initialList)
-  } else {
-    const newList = initialList.filter(el => el.filter_photo.filterName == data);
-    createGallery(newList);
-  }
+  const newList = initialList.filter(el => el.filter_photo.filterName == data);
+    
+  createGallery(newList);
 
   window.lgData[wrapperGallery.getAttribute('lg-uid')].destroy(true);
   initGallery();
