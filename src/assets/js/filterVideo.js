@@ -11,6 +11,7 @@ function init() {
   .then(data => {
     createGallery(data);
     createFilterElement(data);
+    filterList('shortMovies', data)
   });
 }
 
@@ -20,7 +21,7 @@ function createFilterElement(photoList) {
   .then(data => {
     data.forEach(item => {
       wrapper.insertAdjacentHTML('beforeend', `
-      <div class="filter-item" data-filter="${item.filter_name}">${item.filter_name}</div>
+      <div class="filter-item" data-filter="${removeSpaces(item.filter_name)}">${item.filter_name}</div>
       `)
     });
     addActive(photoList);
@@ -32,7 +33,7 @@ function createGallery(list) {
     
     if (item.inProduction) {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
-    <div class="col-12 col-md-4 mt-30" data-filter="${item.filter_video.filter_name}">
+    <div class="col-12 col-md-4 mt-30" data-filter="${removeSpaces(item.filter_video.filter_name)}">
       <div class="simple-video">
         <div class="preview">
           <img src="${item.cover.url}" alt="">
@@ -44,7 +45,7 @@ function createGallery(list) {
     `)
     } else {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
-      <div class="col-12 col-md-4 mt-30" data-filter="${item.filter_video.filter_name}">
+      <div class="col-12 col-md-4 mt-30" data-filter="${removeSpaces(item.filter_video.filter_name)}">
         <div class="simple-video">
           <a data-toggle="modal" data-target="#modal-video" data-id="${item.id}" class="preview">
             <img src="${item.cover.url}" alt="">
@@ -61,6 +62,9 @@ function createGallery(list) {
 function addActive(list) {
   const filters = wrapper.querySelectorAll('.filter-item');
   filters.forEach(filter => {
+    if (filter.getAttribute('data-filter') === 'shortMovies') {
+      filter.classList.add('active');
+    }
     filter.addEventListener('click', evt => {
       removeAllActive();
       filter.classList.add('active');
@@ -68,6 +72,10 @@ function addActive(list) {
       filterList(data, list);
     });
   });
+}
+
+function removeSpaces(string) {
+  return string.replace(/\s+/g, '')
 }
 
 function removeAllActive() {
@@ -79,10 +87,7 @@ function removeAllActive() {
 
 function filterList(data, list) {
   wrapperGallery.innerHTML = "";
-  if (data == 'all') {
-    createGallery(list)
-  } else {
-    const newList = list.filter(el => el.filter_video.filter_name == data);
-    createGallery(newList);
-  }
+  const newList = list.filter(el => removeSpaces(el.filter_video.filter_name) == data);
+  
+  createGallery(newList);
 }
