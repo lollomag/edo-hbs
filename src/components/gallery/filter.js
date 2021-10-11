@@ -31,8 +31,9 @@ function createFilterElement(photoList) {
 function createGallery(list) {
   list.forEach(item => {
     if (!item) return;
-
-    if (item.image) {
+    console.log(item);
+    
+    if (item.image && item.filter_photo) {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
         <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-30 gallery-item-grid" data-filter="${item.filter_photo.filterName}">
           <a href="${item.image.url}" class="gallery-item">
@@ -80,7 +81,11 @@ function removeAllActive() {
 
 function filterList(data, initialList) {
   wrapperGallery.innerHTML = "";
-  const newList = initialList.filter(el => el.filter_photo.filterName == data);
+  const newList = initialList.filter(el => {
+    if (el.filter_photo) {
+      return el.filter_photo.filterName == data
+    } 
+  });
     
   createGallery(newList);
 
