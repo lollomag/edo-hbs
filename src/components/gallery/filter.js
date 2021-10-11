@@ -31,7 +31,6 @@ function createFilterElement(photoList) {
 function createGallery(list) {
   list.forEach(item => {
     if (!item) return;
-    console.log(item);
     
     if (item.image && item.filter_photo) {
       wrapperGallery.insertAdjacentHTML('afterbegin', `
