@@ -1,32 +1,33 @@
 <!doctype html>
 <html lang="it" data-language="it">
-	{{> head titlePage = "Home"}}
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Hi, I'm Edoardo Marcuzzi, a young director, freelance journalist and creative producer born on the 19 of April in 1996, in La Spezia. Here is my works">
+    <title>Maintenance</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" async>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet" defer>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWFWYJH83J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NWFWYJH83J');
+    </script>
+</head>
 
 	<body>
-		{{> header/header active-1=true}}
-		<main class="l-main page">
-			<div class="container">
-				<div class="home-video mb-80"></div>
-				<div class="bio-carousel"></div>
-				<div class="fx-center-between mt-60">
-					<div class="social-link">
-						<a href="https://it.linkedin.com/in/edoardo-marcuzzi-46a347200" target="_blank" rel="noreferrer" class="social-item" title="Link open a new page on my linkedin account"><span
-								class="icn-linkedin"></span></a>
-						<a href="https://vimeo.com/user107581401" target="_blank" rel="noreferrer" class="social-item" title="Link open a new page on my vimeo account"><span
-								class="icn-vimeo"></span></a>
-						<a href="https://www.instagram.com/edomarcuz/?hl=it" target="_blank" rel="noreferrer" class="social-item" title="Link open a new page on my instagram account"><span
-								class="icn-instagram"></span></a>
-						<a href="tel:+393492879150" class="social-item" title="Call me at the number 3492879150"><span class="icn-phone"></span></a>
-					</div>
-					<a download="CV-edoardo-marcuzzi" target="_blank" class="download-btn" rel="noreferrer">
-						<span class="btn-text">Download my CV</span>
-						<span class="material-icons-outlined">file_download</span>
-					</a>
-				</div>
-			</div>
-			{{> modals/modal-mail-success}}
-		</main>
-		{{> script}}
+		{{> maintenance-banner/maintenance-banner }}
 	</body>
 
 </html>
